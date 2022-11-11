@@ -1,0 +1,86 @@
+[
+    {
+        "name": "Led Zeppelin 4",
+        "genre": "Rock",
+        "decade": "70s",
+        "price": 15.99,
+        "image": "images/zep4.png"
+    },
+    {
+        "name": "Born to Die",
+        "genre": "Pop",
+        "decade": "10s",
+        "price": 19.99,
+        "image": "images/lana.png"
+    },
+    {
+        "name": "Stankonia",
+        "genre": "Hip Hop",
+        "decade": "00s",
+        "price": 24.99,
+        "image": "images/outkast.png"
+    },
+    {
+        "name": "Wish You Were Here",
+        "genre": "Rock",
+        "decade": "70s",
+        "price": 15.99,
+        "image": "images/pinkfloyd.png"
+    },
+    {
+        "name": "Californication",
+        "genre": "Rock",
+        "decade": "90s",
+        "price": 19.99,
+        "image": "images/rhcp.png"
+    },
+    {
+        "name": "The Miseducation of Lauryn Hill",
+        "genre": "Hip Hop",
+        "decade": "90s",
+        "price": 34.99,
+        "image": "images/lauryn.png"
+    },
+    {
+        "name": "The Loneliest Time",
+        "genre": "Pop",
+        "decade": "10s",
+        "price": 19.99,
+        "image": "images/carly.png"
+    },
+    {
+        "name": "The Smiths",
+        "genre": "Rock",
+        "decade": "80s",
+        "price": 29.99,
+        "image": "images/smiths.png"
+    },
+    {
+        "name": "Speak Now",
+        "genre": "Pop",
+        "decade": "10s",
+        "price": 11.99,
+        "image": "images/taylor.png"
+    },
+    {
+        "name": "Madvillainy",
+        "genre": "Hip Hop",
+        "decade": "00s",
+        "price": 24.99,
+        "image": "images/doom.png"
+    },
+    {
+        "name": "Can't Buy A Thrill",
+        "genre": "Rock",
+        "decade": "70s",
+        "price": 15.99,
+        "image": "images/steelydan.png"
+    },
+    {
+        "name": "Back To The Egg",
+        "genre": "Rock",
+        "decade": "70s",
+        "price": 24.99,
+        "image": "images/wings.png"
+    }
+]
