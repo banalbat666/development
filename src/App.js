@@ -19,8 +19,10 @@ function App() {
           ))}
         </div>
         
-        <div className="Cart">
-            <h2 id="light-text">Cart</h2>
+        <div className="Side">
+          <h2 id="light-text">Sort By:</h2>
+          <h2 id="light-text">Filter By:</h2>
+          <h2 id="light-text">Cart:</h2>
         </div>
       </div>
     </div>
