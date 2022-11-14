@@ -1,6 +1,7 @@
 [
     {
         "name": "Led Zeppelin 4",
+        "artist": "Led Zeppelin",
         "genre": "Rock",
         "decade": "70s",
         "price": 15.99,
@@ -8,6 +9,7 @@
     },
     {
         "name": "Born to Die",
+        "artist": "Lana Del Rey",
         "genre": "Pop",
         "decade": "10s",
         "price": 19.99,
@@ -15,6 +17,7 @@
     },
     {
         "name": "Stankonia",
+        "artist": "Outkast",
         "genre": "Hip Hop",
         "decade": "00s",
         "price": 24.99,
@@ -22,6 +25,7 @@
     },
     {
         "name": "Wish You Were Here",
+        "artist": "Pink Floyd",
         "genre": "Rock",
         "decade": "70s",
         "price": 15.99,
@@ -29,6 +33,7 @@
     },
     {
         "name": "Californication",
+        "artist": "Red Hot Chili Peppers",
         "genre": "Rock",
         "decade": "90s",
         "price": 19.99,
@@ -36,6 +41,7 @@
     },
     {
         "name": "The Miseducation of Lauryn Hill",
+        "artist": "Lauryn Hill",
         "genre": "Hip Hop",
         "decade": "90s",
         "price": 34.99,
@@ -43,6 +49,7 @@
     },
     {
         "name": "The Loneliest Time",
+        "artist": "Carly Rae Jepsen",
         "genre": "Pop",
         "decade": "10s",
         "price": 19.99,
@@ -50,6 +57,7 @@
     },
     {
         "name": "The Smiths",
+        "artist": "The Smiths",
         "genre": "Rock",
         "decade": "80s",
         "price": 29.99,
@@ -57,6 +65,7 @@
     },
     {
         "name": "Speak Now",
+        "artist": "Taylor Swift",
         "genre": "Pop",
         "decade": "10s",
         "price": 11.99,
@@ -64,6 +73,7 @@
     },
     {
         "name": "Madvillainy",
+        "artist": "MF Doom",
         "genre": "Hip Hop",
         "decade": "00s",
         "price": 24.99,
@@ -71,6 +81,7 @@
     },
     {
         "name": "Can't Buy A Thrill",
+        "artist": "Steely Dan",
         "genre": "Rock",
         "decade": "70s",
         "price": 15.99,
@@ -78,6 +89,7 @@
     },
     {
         "name": "Back To The Egg",
+        "artist": "Wings",
         "genre": "Rock",
         "decade": "70s",
         "price": 24.99,
