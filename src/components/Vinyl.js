@@ -1,7 +1,11 @@
 import './../App.css';
 import AddButton from "./AddButton.js";
+import { useState } from 'react';
+
 
 export default function Vinyl(props) {
+    const [count, setCount] = useState(0);
+
     return (
         <div className="VinylItem">
             <img src={props.cover} alt={props.name + " by " + props.artist} id="img"/>
@@ -11,7 +15,7 @@ export default function Vinyl(props) {
                 <p>Decade: {props.decade}</p>
                 <p>Price: ${props.price}</p>
             </div>
-            <AddButton />
+            <AddButton totalPrice={props.totalPrice} setTotalPrice={props.setTotalPrice} itemPrice={props.price} itemCount={count} setItemCount={setCount} cartContents={props.cartContents} setCartContents={props.setCartContents} itemName={props.name} />
         </div>
     );
 }

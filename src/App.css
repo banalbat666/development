@@ -30,6 +30,10 @@
     background-color: #292929;
 }
 
+.Side-Subsect {
+    text-align: center;
+}
+
 .VinylItem {
     display: flex;
     flex-direction: column;
