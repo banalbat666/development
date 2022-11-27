@@ -15,7 +15,7 @@ export default function Vinyl(props) {
                 <p>Decade: {props.decade}</p>
                 <p>Price: ${props.price}</p>
             </div>
-            <AddButton totalPrice={props.totalPrice} setTotalPrice={props.setTotalPrice} itemPrice={props.price} itemCount={count} setItemCount={setCount} cartContents={props.cartContents} setCartContents={props.setCartContents} itemName={props.name} />
+            <AddButton totalPrice={props.totalPrice} setTotalPrice={props.setTotalPrice} itemPrice={props.price} itemCount={count} setItemCount={setCount} itemName={props.name} cart={props.cart} setCart={props.setCart} />
         </div>
     );
 }
