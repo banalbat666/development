@@ -47,6 +47,7 @@ function App() {
 
 	function applyFilters(filters) {
 		if (filters.length === 0) {
+			jankSort(sorter);
 			return vinylData;
 		}
 
