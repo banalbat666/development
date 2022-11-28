@@ -1,7 +1,7 @@
 import './App.css';
 import vinylData from './assets/vinyl-data.json';
 import Vinyl from './components/Vinyl';
-// import ClearButton from './components/ClearButton';
+import Sort from './components/Sort';
 import { useState } from 'react';
 
 vinylData.forEach((item) => {
@@ -18,9 +18,22 @@ function PrintCart(arr) {
 	return ret;
 }
 
+// function sortRecords(type) {
+// 	let ret = vinylData.sort((itemA, itemB) => {return itemA[type] - itemB[type]});
+// }
+
 function App() {
 	const [totalPrice, setTotalPrice] = useState(0);
 	const [cart, setCart] = useState([]);
+	const [info, setInfo] = useState(vinylData);
+	console.log(info);
+
+	function sortRecords(type) {
+		// let ret = info.sort((itemA, itemB) => {return itemA[type] - itemB[type]});
+		// console.log("bruh");
+		// console.log(ret);
+		setInfo(prevInfo => [...prevInfo].sort((itemA, itemB) => {return itemA[type] - itemB[type]}));
+	}
 
 	return (
 		<div className="App">
@@ -30,6 +43,7 @@ function App() {
 			<div className="Side">
 				<div className="Side-Subsect">
 					<h2 id="light-text">Sort By:</h2>
+					<Sort sortRecords={sortRecords} />
 				</div>
 
 				<div className="Side-Subsect">
@@ -46,7 +60,7 @@ function App() {
 			</div>
 
 			<div className="Records">
-				{vinylData.map((item, index) => (
+				{info.map((item, index) => (
 					<Vinyl name={item.name} artist={item.artist} genre={item.genre} decade={item.decade}price={item.price} cover={item.image} totalPrice={totalPrice} setTotalPrice={setTotalPrice} cart={cart} setCart={setCart} />
 				))}
 			</div>
