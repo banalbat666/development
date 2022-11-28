@@ -19,7 +19,7 @@ export default function AddButton(props) {
                     // fixes js float math
                     props.setTotalPrice(Math.round((props.totalPrice - props.itemPrice) * 1e12) / 1e12);
                     // remove item from cart
-                    props.setCart(props.cart.filter(item => item !== props.itemName));
+                    props.setCart(props.cart.filter((item) => item !== props.itemName));
                     setBtnText("Add to Cart");
                     setBtnState(true);
                 }

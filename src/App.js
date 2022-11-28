@@ -24,6 +24,7 @@ function App() {
 	const [cart, setCart] = useState([]);
 	const [info, setInfo] = useState(vinylData);
 	const [appliedFilters, setAppliedFilters] = useState([]);
+	const [sorter, setSorter] = useState("imgNum");
 	const filterGroups = [
 		{
 			type: "genre",
@@ -36,7 +37,12 @@ function App() {
 	];
 
 	function sortRecords(type) {
-		setInfo(prevInfo => [...prevInfo].sort((itemA, itemB) => {return itemA[type] - itemB[type]}));
+		setSorter(type);
+		setInfo((prevInfo) => [...prevInfo].sort((itemA, itemB) => {return itemA[type] - itemB[type]}));
+	}
+
+	function jankSort(type) {
+		vinylData.sort((itemA, itemB) => itemA[type] - itemB[type]);
 	}
 
 	function applyFilters(filters) {
@@ -45,6 +51,7 @@ function App() {
 		}
 
 		let ret = [];
+		jankSort(sorter);
 		vinylData.forEach((record) => {
 			let applies = true;
 			filters.forEach((f) => {
