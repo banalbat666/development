@@ -23,13 +23,14 @@ function App() {
 	const [totalPrice, setTotalPrice] = useState(0);
 	const [cart, setCart] = useState([]);
 	const [info, setInfo] = useState(vinylData);
+	const [appliedFilters, setAppliedFilters] = useState([]);
 	const filterGroups = [
 		{
-			type: "Genre",
+			type: "genre",
 			options: ["Rock", "Pop", "Hip Hop"]
 		},
 		{
-			type: "Decade",
+			type: "decade",
 			options: ["70s", "80s", "90s", "00s", "10s"]
 		}
 	];
@@ -38,8 +39,42 @@ function App() {
 		setInfo(prevInfo => [...prevInfo].sort((itemA, itemB) => {return itemA[type] - itemB[type]}));
 	}
 
+	function applyFilters(filters) {
+		if (filters.length === 0) {
+			return vinylData;
+		}
+
+		let ret = [];
+		vinylData.forEach((record) => {
+			let applies = true;
+			filters.forEach((f) => {
+				if (record[f.filterType] !== f.option) {
+					applies = false;
+				}
+			});
+			if (applies) {
+				ret.push(record);
+			}
+		})
+
+		return ret;
+	}
+
+	function filterRecords(option, filterType) {
+		let ret = [];
+
+		if (appliedFilters.some((f) => f.option === option)) {
+			ret = appliedFilters.filter((elt) => elt.option !== option);
+		} else {
+			ret = [...appliedFilters, {option, filterType}];
+		}
+
+		setAppliedFilters(ret);
+		setInfo(applyFilters(ret));
+	}
+
 	function displayFilters(group) {
-		return <Filter filterGroup={group} filterType={group.type} />;
+		return <Filter filterGroup={group} filterType={group.type} filterRecords={filterRecords} />;
 	}
 
 	return (
