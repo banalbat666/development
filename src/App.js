@@ -2,6 +2,7 @@ import './App.css';
 import vinylData from './assets/vinyl-data.json';
 import Vinyl from './components/Vinyl';
 import Sort from './components/Sort';
+import Filter from './components/Filter';
 import { useState } from 'react';
 
 vinylData.forEach((item) => {
@@ -12,27 +13,33 @@ function PrintCart(arr) {
 	let ret = [];
 
 	for (var i = 0; i < arr.length; i++) {
-		ret.push(<li id="light-text" style={{textAlign: 'left'}}>{arr[i]}</li>);
+		ret.push(<li id="light-text">{arr[i]}</li>);
 	}
 
 	return ret;
 }
 
-// function sortRecords(type) {
-// 	let ret = vinylData.sort((itemA, itemB) => {return itemA[type] - itemB[type]});
-// }
-
 function App() {
 	const [totalPrice, setTotalPrice] = useState(0);
 	const [cart, setCart] = useState([]);
 	const [info, setInfo] = useState(vinylData);
-	console.log(info);
+	const filterGroups = [
+		{
+			type: "Genre",
+			options: ["Rock", "Pop", "Hip Hop"]
+		},
+		{
+			type: "Decade",
+			options: ["70s", "80s", "90s", "00s", "10s"]
+		}
+	];
 
 	function sortRecords(type) {
-		// let ret = info.sort((itemA, itemB) => {return itemA[type] - itemB[type]});
-		// console.log("bruh");
-		// console.log(ret);
 		setInfo(prevInfo => [...prevInfo].sort((itemA, itemB) => {return itemA[type] - itemB[type]}));
+	}
+
+	function displayFilters(group) {
+		return <Filter filterGroup={group} filterType={group.type} />;
 	}
 
 	return (
@@ -42,20 +49,21 @@ function App() {
 		<div className="Main">
 			<div className="Side">
 				<div className="Side-Subsect">
-					<h2 id="light-text">Sort By:</h2>
+					<h2 id="light-text"><u>Sort By:</u></h2>
 					<Sort sortRecords={sortRecords} />
 				</div>
 
 				<div className="Side-Subsect">
-					<h2 id="light-text">Filter By:</h2>
+					<h2 id="light-text"><u>Filter By:</u></h2>
+					{filterGroups.map(displayFilters)}
 				</div>
 
 				<div className="Side-Subsect">
-					<h2 id="light-text">Cart:</h2>
+					<h2 id="light-text"><u>Cart:</u></h2>
 					<ul>
 						{PrintCart(cart)}
 					</ul>
-					<p id="light-text">Total: ${totalPrice}</p> 
+					<b><p id="light-text">Total: ${totalPrice}</p></b>
 				</div>
 			</div>
 

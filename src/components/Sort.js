@@ -5,7 +5,6 @@ export default function SortItems(props) {
     const [sortState, setSortState] = useState("imgNum");
 
     function changeSort(event) {
-        console.log(event.target.value);
         setSortState(event.target.value);
         props.sortRecords(event.target.value);
     }
@@ -19,7 +18,7 @@ export default function SortItems(props) {
 
             <div>
                 <input type="radio" value="price" id="low-high" name="sorter" checked={sortState==="price"}></input>
-                <label for="low-high" id="light-text">Price</label>
+                <label for="low-high" id="light-text">Price: Low to High</label>
             </div>
         </div>
     );
