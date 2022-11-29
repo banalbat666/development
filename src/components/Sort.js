@@ -10,7 +10,7 @@ export default function SortItems(props) {
     }
 
     return (
-        <div style={{display:'flex',flexDirection:'column'}} value={sortState} onChange={changeSort}>
+        <div style={{display:'flex',flexDirection:'column'}} value="imgNum" onChange={changeSort}>
             <div>
                 <input type="radio" value="imgNum" id="popular" name="sorter" checked={sortState==="imgNum"}></input>
                 <label for="popular" id="light-text">Popular</label>
