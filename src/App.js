@@ -26,11 +26,6 @@ function App() {
 	const [info, setInfo] = useState(vinylData);
 	const [appliedFilters, setAppliedFilters] = useState([]);
 	const [sorter, setSorter] = useState("imgNum");
-
-	// const nameToBtn = new Map();
-	// vinylData.forEach((item) => (nameToBtn.set(item.name, true)));
-	// const [btnMap, setBtnMap] = useState(nameToBtn);
-
 	const filterGroups = [
 		{
 			type: "genre",
@@ -127,7 +122,7 @@ function App() {
 
 			<div className="Records">
 				{info.map((item, index) => (
-					<Vinyl name={item.name} artist={item.artist} genre={item.genre} decade={item.decade}price={item.price} cover={item.image} totalPrice={totalPrice} setTotalPrice={setTotalPrice} cart={cart} setCart={setCart} /*btnMap={btnMap} setBtnMap={setBtnMap}*/ />
+					<Vinyl name={item.name} artist={item.artist} genre={item.genre} decade={item.decade}price={item.price} cover={item.image} totalPrice={totalPrice} setTotalPrice={setTotalPrice} cart={cart} setCart={setCart} />
 				))}
 			</div>
 		</div>
